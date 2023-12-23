@@ -1,0 +1,517 @@
+/**** 
+    * formatação padrao do sistema 
+***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.titulo {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.titulo h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+    background-color: #2155e4;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+
+/**** 
+    * formatação do cabecalho 
+***/
+.cabecalho {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px 1px #4070f4;
+    z-index: 999;
+}
+
+.cabecalho .menuDesktop {
+    display: flex;
+}
+
+.cabecalho .center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .logo img{
+    width: 200px;
+    height: 70px;
+}
+
+.cabecalho .menu ul {
+    display: flex;
+}
+
+.cabecalho .menu li+li {
+    margin-left: 20px;
+}
+
+.cabecalho .menu a {
+    padding: 5px;
+    font-size: 21px;
+    color: #000;
+    font-weight: 400;
+}
+
+.cabecalho .menu a.item {
+    border-bottom: 2px solid #4070f4;
+}
+
+.cabecalho .hamburgue {
+    display: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.cabecalho .hamburgue.trocar {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+/**** 
+    * formatação do menuMobile 
+***/
+.menuMobilePai {
+    display: none;
+}
+
+
+
+.menuMobile {
+    z-index: 998;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 90vh;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 1s;
+    background-color: #333333;
+    border-top-left-radius: 10px;
+}
+
+.menuMobile.active {
+    width: 80%;
+    visibility: visible;
+}
+
+.menuMobile ul {
+    padding: 30px;
+    width: 90%;
+    height: 100%;
+}
+
+.menuMobile li+li {
+    margin-top: 20px;
+}
+
+.menuMobile a {
+    padding: 5px;
+    font-size: 21px;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.menuMobile a.item {
+    border-bottom: 2px solid #4070f4;
+}
+
+
+
+/**** 
+    * formatação do conteiner  
+***/
+.conteiner .box1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.box1 .center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box1 .textInitial {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.box1 h1 {
+    font-size: 50px;
+    color: #000;
+}
+
+.box1 h1 span {
+    color: #4070f4;
+}
+
+.box1 .curriculum {
+    display: flex;
+    margin-top: 40px;
+}
+
+
+.box1 .curriculum .dados {
+    border-radius: 20px;
+    background-color: #4070f4;
+}
+
+.box1 .curriculum a {
+    font-size: 21px;
+    color: #ffffff;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 20px;
+}
+
+.box1 .curriculum a:hover {
+    background-color: #2155e4;
+}
+
+.box1 .curriculum .linkedin {
+    margin-right: 15px;
+}
+
+.box1 .portifolio {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: end;
+}
+
+.box1 .portifolio a {
+    margin: 0 15px 30px 0;
+    cursor: pointer;
+
+}
+
+
+
+
+/**** 
+    * formatação do BOX2  
+***/
+.box2 {
+    width: 100%;
+    height: 100vh;
+}
+
+.box2 .center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 .conteudoHabilidades {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.box2 .habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box2 .habilidades {
+    width: 90%;
+    height: 100%;
+}
+
+.box2 .habilidades h2 {
+    width: 80%;
+    margin: 0 auto;
+    color: #000;
+    padding: 20px
+}
+
+.box2 .habilidades .item {
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 2px #ccc;
+    border-radius: 10px;
+}
+
+.box2 .habilidades .tecnologia {
+    width: 20%;
+    display: flex;
+}
+
+.box2 .habilidades .tecnologia h3 {
+    margin-left: 5px;
+}
+
+
+
+
+/**** 
+    * formatação do BOX3 
+***/
+.box3 {
+    height: 100vh;
+}
+
+.box3 .center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box3 .titulo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: end;
+}
+
+.box3 .product {
+    width: 100%;
+    height: 70%;
+}
+
+.box3 iframe {
+    width: 100%;
+    height: 85%;
+}
+
+.box3 .project {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.box3 .project a {
+    width: 80%;
+    text-align: center;
+    font-size: 21px;
+    color: #ffffff;
+    padding: 20px 0;
+    border-radius: 20px;
+    background-color: #2155e4;
+    cursor: pointer;
+}
+
+.box3 .project a:hover {
+    background-color: #103cb4;
+}
+
+
+
+
+
+
+
+/**** 
+    * formatação do footer
+***/
+.rodape {
+    height: 15vh;
+    background-color: #fff;
+    border-top: 1px solid #2155e4;
+    box-shadow: 0 0 5px 2px #2155e4;
+    margin-top: 40px;
+}
+
+.rodape .center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape h3 {
+    color: #2155e4;
+}
+
+
+
+/**** 
+    * formatação das animações
+***/
+.conteiner .anime {
+    opacity: 0;
+    transform: translate3d(-200px,0,0);
+    transition: 2s;
+}
+
+.conteiner .animarStart {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+
+
+
+
+/**** 
+    * @media screen and (max-width: 768px)
+***/
+@media screen and (max-width: 768px) {
+
+    .cabecalho .menu {
+        display: none;
+    }
+
+    .menuMobilePai {
+        display: block;
+    }
+
+    .cabecalho .logo {
+        margin: 0 auto;
+    }
+
+    .cabecalho .hamburgue {
+        display: block;
+        margin-right: 30px;
+    }
+
+    .box1 .curriculum {
+        justify-content: center;
+    }
+
+    .box2 .habilidades .item {
+        width: 100%;
+
+    }
+
+    .box1 .portifolio {
+        justify-content: center;
+    }
+
+
+}
+
+
+/**** 
+    * @media screen and (max-width: 720px)
+***/
+@media screen and (max-width: 720px) {
+
+    .conteiner .box1 {
+        height: 70vh;
+    }
+
+    .box1 .center {
+        width: 90%;
+    }
+
+    .box1 h1 {
+        font-size: 40px;
+        color: #000;
+    }
+
+    .box1 .curriculum a {
+        padding: 10px 30px;
+    }
+
+
+}
+
+
+/**** 
+    * @media screen and (max-width: 614px)
+***/
+@media screen and (max-width: 614px) {
+
+    .box1 .center {
+        width: 95%;
+    }
+
+    .box1 h1 {
+        font-size: 38px;
+        color: #000;
+    }
+
+    .box1 .curriculum {
+        justify-content: left;
+    }
+
+}
+
+
+/**** 
+    * @media screen and (max-width: 370px)
+***/
+@media screen and (max-width: 380px) {
+
+    .box1 {
+        padding-top: 200px;
+        margin-bottom: 150px;
+    }
+
+    .box1 .curriculum {
+        margin-bottom: 10px;
+    }
+
+    .box1 .curriculum a {
+        padding: 10px 15px;
+    }
+    
+
+    .box2 .titulo {
+        padding-bottom: 120px;
+    }
+
+    .box3 {
+        padding-top: 40px;
+    }
+
+    .box3 .project {
+        display: none;
+    }
+    
+}
+

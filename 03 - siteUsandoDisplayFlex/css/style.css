@@ -1,0 +1,308 @@
+/**********
+    * Formatação padrao do sistema
+    *
+*****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', Georgia, serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+/**********
+    * Formatação content
+    *
+*****/
+.content {
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-areas: 
+        "menu menu menu"
+        "sideNav corpo anuncios"
+        "rodape rodape rodape"
+    ;
+}
+
+
+
+/**********
+    * Formatação header.menu
+    *
+*****/
+.menu {
+    grid-area: menu;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.menu .logo img {
+    width: 200px;
+}
+
+.menu nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu nav ul li + li {
+    margin-left: 30px;
+}
+
+.menu nav ul a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+.menu nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+
+
+
+/**********
+    * Formatação nav.sideNav
+    *
+*****/
+.sideNav {
+    grid-area: sideNav;
+    background: #fafbfc;
+    padding: 10px;
+}
+
+.sideNav ul li a {
+    display: block;
+    min-width: 60px;
+    max-width: 140px;
+    margin: 0 auto 30px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+}
+
+.sideNav ul li a:hover {
+    background: #b07dfb;
+    transform: rotate(-15deg);
+    transition: .5s;
+}
+
+
+
+
+/**********
+    * Formatação section.corpo
+    *
+*****/
+.corpo {
+    grid-area: corpo;
+    max-width: 900px;
+    margin: 0 auto;
+    padding:30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+
+/* Formatação titulo corpo */
+.corpo .titulo {
+    color: #b07dfb;
+}
+
+.corpo .titulo h1 {
+    font-size: 3.75em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.corpo .titulo span {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+
+
+/* Formatação .caracteristicas corpo */
+.corpo .caracteristicas {
+    display: flex;
+    align-items: flex-start;
+}
+
+.corpo .caracteristicas > div {
+    position: relative;
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(145deg, #8844ee, #b07dfb);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+    cursor: pointer;
+}
+
+.corpo .caracteristicas > div:hover {
+    transform: rotate(-15deg);
+}
+
+.corpo .caracteristicas > div:first-child {
+    margin-right: 30px;
+}
+
+.corpo .caracteristicas > div span {
+    display: block;
+}
+
+.corpo .caracteristicas > div .numero {
+    color: #b07dfb;
+    font-size: 3em;
+    line-height: 1;
+}
+
+.corpo .caracteristicas > div .rotulo {
+    position: relative;
+    top: 2px;
+    font-size: 19px;
+    background-color: #ffffff;
+    color: #b07dfb;
+    line-height: 1;
+    margin: 10px auto 0 auto;
+    padding: 5px 0;
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+
+/* Formatação p corpo */
+.corpo .colWap {
+    grid-column: 1 / -1;
+}
+
+.corpo .destaque {
+    color:#b07dfb;
+}
+
+
+/* Formatação Imagem1 corpo */
+.corpo .imagem1 {
+    /* grid-row: 3 / 5; */
+    grid-row: span 2;
+    align-self: end;
+}
+
+/* Formatação imagem2 corpo */
+.corpo .imagem2 {
+    align-self: end;
+}
+
+
+/* Formatação .informacoes p+p corpo */
+.informacoes p + p {
+    margin-top: 30px;
+}
+
+/* Formatação .citacao / atributos corpo */
+.corpo .citacao, .corpo .atributos {
+    align-self: start;
+    padding: 30px;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    color: #ffffff;
+    line-height: 1;
+    box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
+    border-radius: 20px;
+}
+
+.corpo .citacao p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.7em;
+    font-style: italic;
+    text-align: center;
+    color: #ffffff;
+}
+
+.corpo .atributos li {
+    color: #ffffff;
+    padding: 10px 0 10px 10px;
+    margin: 0 20px;
+    font-size: 1.5em;
+    font-family: Courier, monospace;
+}
+
+.corpo .atributos li + li {
+    border-top: 1px solid #fafbfc;
+}
+
+
+
+
+
+
+
+/**********
+    * Formatação aside.anuncios
+    *
+*****/
+.anuncios {
+    grid-area: anuncios;
+    background: #fafbfc;
+    display: grid;
+    grid-gap: 30px;
+    align-content: start;
+    padding: 30px;
+}
+
+
+
+/**********
+    * Formatação footer.rodape
+    *
+*****/
+.rodape {
+    grid-area: rodape;
+    background: linear-gradient(145deg, #8844ee, #b07dfb);
+}
+
+.rodape p {
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    font-size: 19px;
+}
+
+
+
+

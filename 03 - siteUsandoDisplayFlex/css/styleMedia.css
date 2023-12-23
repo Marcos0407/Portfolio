@@ -1,0 +1,178 @@
+/**********
+    * Formatação @media screen and max-width: 1200px;
+    *
+*****/
+@media (max-width: 1200px) {
+
+    /* Formatação .content */
+    .content {
+        grid-template-areas: 
+        "menu menu menu"
+        "sideNav corpo corpo"
+        "sideNav anuncios anuncios"
+        "rodape rodape rodape"
+    ;
+    }
+
+
+    /* Formatação .anuncios */
+    .anuncios {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+/**********
+    * Formatação @media screen and max-width: 760px;
+    *
+*****/
+@media (max-width: 760px) {
+    
+
+    /* Formatação .content */
+    .content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "menu "
+        "sideNav"
+        "corpo"
+        "anuncios"
+        "rodape"
+    ;
+    }
+
+
+
+    /* Formatação .menu */
+    .menu {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .menu .logo {
+        margin-bottom: 20px;
+    }
+
+    .menu nav ul {
+        justify-content: center;
+    }
+
+
+
+
+    /* Formatação .sideNav */
+    .sideNav {
+        position: relative;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        padding: 10px 20px;
+    }
+
+    @keyframes seta {
+        from {
+            right: 30px;
+        }
+        to {
+            right: 20px;
+        }
+    }
+
+    .sideNav::after {
+        content: '→';
+        color: #b07dfb;
+        font-size: 30px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        animation: seta .3s ease-in 0s infinite alternate;
+    }
+
+    .sideNav ul {
+        display: flex;
+    }
+
+    .sideNav ul li + li{
+        margin-left: 20px;
+    }
+
+    .sideNav ul li a {
+        width: 120px;
+        margin: 40px auto 20px auto;
+    }
+
+
+    .sideNav ul li a:hover {
+        transform: rotate(-10deg);
+    }
+
+}
+
+
+
+
+
+
+/**********
+    * Formatação @media screen and max-width: 600px;
+    *
+*****/
+@media (max-width: 600px) {
+
+
+    /* Formatação .sideNav */
+    .corpo {
+        grid-template-columns: 1fr;
+    }
+
+
+    .corpo .titulo {
+        text-align: center;
+    }
+
+    .corpo .caracteristicas {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    /* Formatação Imagem1 corpo */
+    .corpo .imagem1 {
+        /* grid-row: 3 / 5; */
+        /* grid-row: span 1;
+        align-self: end; */
+        
+        height: 350px;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+/**********
+    * Formatação @media screen and max-width: 370px;
+    *
+*****/
+@media (max-width: 370px) {
+
+
+    .menu nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .menu nav ul a {
+        display: inline-block;
+        padding: 10px 0;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .menu nav ul li:nth-child(1) {
+        margin-left: 30px;
+    }
+
+}
